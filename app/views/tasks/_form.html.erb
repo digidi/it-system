@@ -1,0 +1,22 @@
+
+<%= semantic_nested_form_for [@task] do |f| %>
+
+  <%= f.input :title %>   
+  <%= f.input :body, :as => :text %>   
+  
+   <%= f.fields_for :attributes  do |builder| %>
+   <p>
+     <%= builder.input :name, :input_html => { :rows => 10 } %><br />   
+     <%= f.hidden_field :_destroy %>
+     <%= link_to_function "Удалить", "remove_fields(this)" %>
+  <% end %>
+  
+    <div class='link_add_aftermath'><%= f.link_to_add t("Добавить атрибут"), :attributes %></div>
+
+  
+  <%= f.action :submit, :as => :button, :button_html => { :class => 'button spade'} %>
+  <%= f.action :cancel, :as => :link, :button_html => { :class => 'button light'} %> 
+  
+<% end %>
+
+

@@ -1,0 +1,17 @@
+
+<%= semantic_nested_form_for [@task, @customer] do |f| %>
+
+  <%= f.input :name %>   
+
+
+  <% @tasks.attributes.each do |attribute| %>
+      <%= attribute.neme %>
+  <% end %>
+  
+   
+  <%= f.action :submit, :as => :button, :button_html => { :class => 'button spade'} %>
+  <%= f.action :cancel, :as => :link, :button_html => { :class => 'button light'} %> 
+  
+<% end %>
+
+

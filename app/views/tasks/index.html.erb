@@ -1,0 +1,10 @@
+
+
+<h3>Задача</h3>
+<% @tasks.each do |task| %>
+  <tr>       
+    <td id='title'><h4><%= link_to task.title, task %></h4></td>   
+  </tr>
+<% end %>
+
+<%= link_to "Создать задачу", new_task_path, :class => 'button light' %>

@@ -1,0 +1,17 @@
+<%= link_to @task.title, edit_task_path(@task) %>
+</br>
+<% @task.attributes.each do |attribute| %>
+  Attribute: <%=  attribute.id %>
+  name: <%=  attribute.name %></br>
+<% end %>
+       
+<%= link_to "Добавить атрибут", new_task_attribute_path(@task) %>
+
+</br>
+<% @task.customers.each do |customer| %>
+  Customer: <%=  customer.id %>
+  name: <%=link_to customer.name, task_customer_path(@task) %></br>
+<% end %>
+
+<%= link_to "Добавить потребителя", new_task_customer_path(@task) %>
+

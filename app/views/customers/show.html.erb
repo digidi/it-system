@@ -1,0 +1,12 @@
+<%= @customer.name %>
+</br>
+
+<%= @task.attributes %>
+
+
+<% @customer.values.each do |value| %>
+  value: <%=  value.id %>
+  name: <%=link_to value.name, task_customer_value_path(@task, @customer) %></br>
+<% end %>
+
+<%= link_to "Добавить значение", new_task_customer_value_path(@task, @customer) %>

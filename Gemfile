@@ -21,6 +21,14 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'formtastic'
+gem 'inherited_resources'
+gem 'nested_form'
+
+
+gem 'compass'
+gem 'compass-rails'
+gem 'fancy-buttons'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,4 +1,19 @@
 ITSystem::Application.routes.draw do
+
+  root :to => 'tasks#index'   
+  
+  resources :tasks do
+      resources :attributes do
+        resources :values
+      end
+      resources :customers do 
+        resources :values
+      end
+  end
+  
+  
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
