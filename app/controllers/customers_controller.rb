@@ -7,7 +7,7 @@ class CustomersController < ApplicationController
   
   def new
       @customer = Customer.new
-      @attributes = Task.first.attributes.all
+      
   end
      
    
